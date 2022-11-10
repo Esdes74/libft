@@ -6,11 +6,11 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 18:30:07 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/09 18:30:44 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/10 16:06:34 by eslamber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (c + 32);

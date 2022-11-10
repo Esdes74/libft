@@ -6,7 +6,7 @@
 #    By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 07:23:10 by eslamber          #+#    #+#              #
-#    Updated: 2022/11/09 22:58:09 by eslamber         ###   ########.fr        #
+#    Updated: 2022/11/10 12:21:38 by eslamber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,7 +60,7 @@ OBJ_BONUS := $(SRC_BONUS:%.c=%.o)
 NAME := libft.a
 HEADER := libft.h
 
-FLAGS := -Wall -Werror -Wextra
+FLAGS := -Wall -Wextra -Werror
 CC := gcc
 
 #
@@ -73,9 +73,9 @@ bonus: $(OBJ) $(OBJ_BONUS)
 	ar rc $(NAME) $^
 
 $(NAME): $(OBJ)
-	ar rc $@ $<
+	ar rc $@ $^
 
-$(OBJ): $(SRC) $(HEADER)
+%.o: %.c $(HEADER)
 	$(CC) $(FLAGS) -c $< -o $@
 
 $(OBJ_BONUS): $(SRC_BONUS) $(HEADER)
@@ -98,4 +98,4 @@ re: fclean all
 
 rebonus: fclean clean_bonus bonus
 
-.PHONY: clean fclean re all bonus clean_bonus
+.PHONY: clean fclean re all clean_bonus bonus

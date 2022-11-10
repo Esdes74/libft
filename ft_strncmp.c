@@ -6,7 +6,7 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 23:11:33 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/09 23:17:19 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/10 12:25:45 by eslamber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strncmp(const char *first, const char *sec, size_t n)
 	size_t	len;
 
 	len = 0;
-	while (first[len] != '\0 && sec[len] != '\0' && len < n)
+	while (first[len] != '\0' && sec[len] != '\0' && len < n)
 	{
 		if (first[len] != sec[len])
 			return (first[len] - sec[len]);

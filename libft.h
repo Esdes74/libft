@@ -6,7 +6,7 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:15:41 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/09 23:21:12 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/10 13:48:41 by eslamber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 
 // Copy n first bytes of src memorie to dest memorie
-void	*memcpy(void *restrict dest, const void *restrict src, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 // Return upper caractere of c if is a lowercase caractere
 int		ft_toupper(int c);

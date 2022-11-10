@@ -6,20 +6,20 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 18:14:14 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/09 18:18:01 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/10 13:11:34 by eslamber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memcpy(void *restrict dest, const void *restrict src, size_t n)
+void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 {
 	size_t	len;
 
 	len = 0;
 	while (len < n)
 	{
-		(dest + len) = (src + len);
+		((char *)dest)[len] = ((char *)src)[len];
 		len++;
 	}
 	return (dest);
