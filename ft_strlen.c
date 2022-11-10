@@ -6,8 +6,18 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 14:49:28 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/08 15:08:46 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/09 17:24:19 by eslamber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+size_t	ft_strlen(const char *s)
+{
+	size_t	len;
+
+	len = 0;
+	while(s[len] != '\0')
+		len++;
+	return (len):
+}
