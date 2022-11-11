@@ -6,7 +6,7 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:15:41 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/10 19:57:49 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/11 15:20:57 by eslamber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 // Copy n first bytes of src to dest with a temporarie stocking
 void	*ft_memmove(void *dest, const void *src, size_t n);
+
+// Copy n - 1 first caracteres from src to dest
+size_t	ft_strlcpy(char *dest, const char *src, size_t n);
 
 // Return upper caractere of c if is a lowercase caractere
 int		ft_toupper(int c);
