@@ -6,7 +6,7 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 18:14:14 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/10 19:55:21 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/11 18:34:36 by eslamber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	len = 0;
 	while (len < n)
 	{
-		((char *)dest)[len] = ((char *)src)[len];
+		((unsigned char *)dest)[len] = ((unsigned char *)src)[len];
 		len++;
 	}
 	return (dest);
