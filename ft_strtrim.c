@@ -6,7 +6,7 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:07:36 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/14 15:41:38 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/14 20:29:52 by eslamber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,40 +26,29 @@ int	ft_in(const char src, const char *test)
 	return (0);
 }
 
-size_t	count(const char *src, const char *set)
+void	ft_analyse(const char *src, const char *set, size_t *len, size_t *len_f)
 {
-	size_t	nbr;
-	size_t	ind;
+	size_t	save_len;
 
-	nbr = 0;
-	ind = 0;
-	while (src[ind] != '\0')
+	while (ft_in(src[*len], set) == 1)
+		(*len)++;
+	save_len = *len;
+	*len_f = *len;
+	while (src[save_len] != '\0')
 	{
-		if (ft_in(src[ind], set) == 0)
-			nbr++;
-		ind++;
+		if (ft_in(src[save_len], set) == 0)
+			*len_f = save_len;
+		save_len++;
 	}
-	return (nbr);
 }
 
 char	*ft_strtrim(const char *src, const char *set)
 {
-	size_t	len;
-	size_t	len_new;
+	size_t	begin;
+	size_t	end;
 	char	*new;
 
-	len = 0;
-	len_new = count(src, set);
-	new = (char *) malloc(sizeof(char) * len_new + 1);
-	if (new == 0)
-		return (0);
-	len_new = 0;
-	while (src[len] != '\0')
-	{
-		if (ft_in(src[len], set) == 0)
-			new[len_new++] = src[len];
-		len++;
-	}
-	new[len_new] = '\0';
+	ft_analyse(src, set, &begin, &end);
+	new = ft_substr(src, (unsigned int) begin, end - begin + 1);
 	return (new);
 }

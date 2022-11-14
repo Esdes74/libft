@@ -6,7 +6,7 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:15:41 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/14 15:09:46 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/14 20:43:18 by eslamber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int		ft_atoi(const char *s);
 // Same as malloc but fill with 0
 void	*ft_calloc(size_t nbr, size_t size);
 
-// Copy s from start index to len
+// Copy len caracteres from s[start]
 // Return this new string or 0 if didn't work
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 
@@ -92,6 +92,9 @@ char	*ft_strjoin(const char *dest, const char *src);
 
 // Return a new string src without caracteres in set
 char	*ft_strtrim(const char *src, const char *set);
+
+// Return a new string src without caracteres in set
+char	*ft_split(const char *src, const char set);
 
 // Write caractere c in descriptor file fd
 void	ft_putchar_fd(char c, int fd);
