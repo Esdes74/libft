@@ -6,13 +6,14 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:15:41 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/11 15:20:57 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/14 15:09:46 by eslamber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <unistd.h>
 
 // Return 1 if c is alphabethic caractere
 int		ft_isalpha(int c);
@@ -48,6 +49,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 // Copy n - 1 first caracteres from src to dest
 size_t	ft_strlcpy(char *dest, const char *src, size_t n);
 
+// Concatenate src at end of dest
+size_t	ft_strlcat(char *dest, const char *src, size_t n);
+
 // Return upper caractere of c if is a lowercase caractere
 int		ft_toupper(int c);
 
@@ -64,4 +68,37 @@ char	*ft_strrchr(const char *s, int c);
 // than first, and 0 if they are same
 int		ft_strncmp(const char *first, const char *sec, size_t n);
 
+// Return first occurence of c in src
+void	*ft_memchr(const void *src, int c, size_t n);
+
+// Return difference (s - c) when differents
+int		ft_memcmp(const void *s, const void *c, size_t n);
+
+// Return first occurence of little
+char	*ft_strnstr(const char *big, const char *little, size_t n);
+
+// Change int string to int
+int		ft_atoi(const char *s);
+
+// Same as malloc but fill with 0
+void	*ft_calloc(size_t nbr, size_t size);
+
+// Copy s from start index to len
+// Return this new string or 0 if didn't work
+char	*ft_substr(const char *s, unsigned int start, size_t len);
+
+// Return new string what is src concatenated to dest
+char	*ft_strjoin(const char *dest, const char *src);
+
+// Return a new string src without caracteres in set
+char	*ft_strtrim(const char *src, const char *set);
+
+// Write caractere c in descriptor file fd
+void	ft_putchar_fd(char c, int fd);
+
+// Write string s in descriptor file fd
+void	ft_putstr_fd(char *s, int fd);
+
+// Write string s in descriptor file fd with end line
+void	ft_putendl_fd(char *s, int fd);
 #endif

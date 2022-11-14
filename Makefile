@@ -6,7 +6,7 @@
 #    By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 07:23:10 by eslamber          #+#    #+#              #
-#    Updated: 2022/11/10 12:21:38 by eslamber         ###   ########.fr        #
+#    Updated: 2022/11/14 14:10:23 by eslamber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,11 @@ SRC := ft_atoi.c \
 	   ft_tolower.c \
 	   ft_strdup.c \
 	   ft_toupper.c \
-	   ft_striteri.c
+	   ft_striteri.c \
+	   ft_putchar_fd.c \
+	   ft_putstr_fd.c \
+	   ft_putendl_fd.c \
+	   ft_putnbr_fd.c
 OBJ := $(SRC:%.c=%.o)
 
 SRC_BONUS := ft_lstiter_bonus.c \
