@@ -6,7 +6,7 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:15:41 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/14 20:43:18 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/15 10:58:43 by eslamber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,9 @@ char	*ft_strtrim(const char *src, const char *set);
 
 // Return a new string src without caracteres in set
 char	*ft_split(const char *src, const char set);
+
+// Inverse of atoi
+char	*ft_itoa(int n);
 
 // Write caractere c in descriptor file fd
 void	ft_putchar_fd(char c, int fd);
