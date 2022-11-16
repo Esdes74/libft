@@ -6,7 +6,7 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:15:41 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/16 14:59:03 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/16 20:41:10 by eslamber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 // Return 1 if c is alphabethic caractere
 int		ft_isalpha(int c);
@@ -97,7 +103,7 @@ char	*ft_strjoin(const char *dest, const char *src);
 char	*ft_strtrim(const char *src, const char *set);
 
 // Return a new string src without caracteres in set
-char	*ft_split(const char *src, const char set);
+char	**ft_split(const char *src, char set);
 
 // Inverse of atoi
 char	*ft_itoa(int n);
@@ -119,4 +125,14 @@ void	ft_putendl_fd(char *s, int fd);
 
 // Write integer n in descriptor file fd with end line
 void	ft_putnbr_fd(int n, int fd);
+
+//################### BONUS #####################
+// Creat a new cell with next = 0 and content = new_content
+t_list	*ft_lstnew(void *new_content);
+
+// Add new in front of list pointed by lst
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
+// Return lenght of lst
+int		ft_lstsize(t_list *lst);
 #endif
