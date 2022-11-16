@@ -6,7 +6,7 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:15:41 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/15 10:58:43 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/16 14:59:03 by eslamber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,9 @@ int		ft_atoi(const char *s);
 // Same as malloc but fill with 0
 void	*ft_calloc(size_t nbr, size_t size);
 
+// Duplicate string in another string allocated
+char	*ft_strdup(const char *src);
+
 // Copy len caracteres from s[start]
 // Return this new string or 0 if didn't work
 char	*ft_substr(const char *s, unsigned int start, size_t len);
@@ -99,6 +102,12 @@ char	*ft_split(const char *src, const char set);
 // Inverse of atoi
 char	*ft_itoa(int n);
 
+// Duplicate str and affect f on each caracteres of new string
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+
+// Affect the fontion f for each caracteres
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+
 // Write caractere c in descriptor file fd
 void	ft_putchar_fd(char c, int fd);
 
@@ -107,4 +116,7 @@ void	ft_putstr_fd(char *s, int fd);
 
 // Write string s in descriptor file fd with end line
 void	ft_putendl_fd(char *s, int fd);
+
+// Write integer n in descriptor file fd with end line
+void	ft_putnbr_fd(int n, int fd);
 #endif

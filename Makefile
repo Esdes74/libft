@@ -6,7 +6,7 @@
 #    By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 07:23:10 by eslamber          #+#    #+#              #
-#    Updated: 2022/11/15 12:11:08 by eslamber         ###   ########.fr        #
+#    Updated: 2022/11/16 14:40:18 by eslamber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,8 @@ SRC := ft_atoi.c \
 	   ft_putnbr_fd.c
 OBJ := $(SRC:%.c=%.o)
 
-SRC_BONUS := ft_lstiter_bonus.c \
+SRC_BONUS := $(SRC) \
+			 ft_lstiter_bonus.c \
 			 ft_lstlast_bonus.c \
 			 ft_lstmap_bonus.c \
 			 ft_lstnew_bonus.c \
@@ -63,9 +64,10 @@ OBJ_BONUS := $(SRC_BONUS:%.c=%.o)
 
 NAME := libft.a
 HEADER := libft.h
+HEADER_BONUS := libft_bonus.h
 
 FLAGS := -Wall -Wextra -Werror
-CC := gcc
+CC := cc
 
 #
 ### compilations rules
@@ -73,16 +75,16 @@ CC := gcc
 
 all: $(NAME)
 
-bonus: $(OBJ) $(OBJ_BONUS)
-	ar rc $(NAME) $^
+bonus: $(OBJ_BONUS)
+	ar rcs $(NAME) $(OBJ_BONUS)
 
 $(NAME): $(OBJ)
-	ar rc $@ $^
+	ar rcs $(NAME) $^
 
 %.o: %.c $(HEADER)
 	$(CC) $(FLAGS) -c $< -o $@
 
-$(OBJ_BONUS): $(SRC_BONUS) $(HEADER)
+%_bonus.o: %_bonus.c $(HEADER_BONUS)
 	$(CC) $(FLAGS) -c $< -o $@
 
 #
@@ -98,8 +100,11 @@ clean_bonus:
 fclean: clean
 	@rm -v $(NAME)
 
+fclean_bonus: clean_bonus
+	@rm -v $(NAME)
+
 re: fclean all
 
-rebonus: fclean clean_bonus bonus
+rebonus: fclean_bonus bonus
 
 .PHONY: clean fclean re all clean_bonus bonus
