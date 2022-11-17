@@ -6,7 +6,7 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:07:36 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/17 09:40:18 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/17 09:43:39 by eslamber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	ft_analyse(const char *src, const char *set, size_t *len, size_t *len_f)
 {
 	size_t	save_len;
 
+	*len = 0;
 	while (ft_in(src[*len], set) == 1)
 		(*len)++;
 	save_len = *len;

@@ -6,7 +6,7 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 13:39:07 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/16 17:04:18 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/17 14:06:32 by eslamber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ char	**ft_split(const char *s, char c)
 	char	*src;
 
 	src = ft_strdup(s);
+	if (src == 0)
+		return (0);
 	nbr_word = analyse(src, c, &len);
 	new = (char **) ft_calloc(nbr_word + 1, sizeof(char *));
 	if (new == 0)

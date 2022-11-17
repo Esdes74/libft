@@ -6,7 +6,7 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:15:41 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/16 20:41:10 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/17 10:30:49 by eslamber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,4 +135,22 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 
 // Return lenght of lst
 int		ft_lstsize(t_list *lst);
+
+// Return last cell of list
+t_list	*ft_lstlast(t_list *lst);
+
+// Add new at the end of list
+void	ft_lstadd_back(t_list **lst, t_list *new);
+
+// Remove one element of list
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+
+// Clear all the list
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+
+// Apply f function to all contents of list
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+
+// Apply f function to all contents and creat a new list with modifications
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 #endif
