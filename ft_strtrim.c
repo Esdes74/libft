@@ -6,7 +6,7 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:07:36 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/14 20:29:52 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/17 09:40:18 by eslamber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,7 @@ char	*ft_strtrim(const char *src, const char *set)
 
 	ft_analyse(src, set, &begin, &end);
 	new = ft_substr(src, (unsigned int) begin, end - begin + 1);
+	if (new == 0)
+		return (0);
 	return (new);
 }
