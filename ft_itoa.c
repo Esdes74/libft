@@ -6,9 +6,10 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 17:23:17 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/16 13:38:31 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/18 12:21:24 by eslamber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int	calc_len(int n)
