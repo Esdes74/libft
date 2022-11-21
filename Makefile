@@ -6,7 +6,7 @@
 #    By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 07:23:10 by eslamber          #+#    #+#              #
-#    Updated: 2022/11/16 17:22:37 by eslamber         ###   ########.fr        #
+#    Updated: 2022/11/21 10:56:28 by eslamber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,20 +87,14 @@ $(NAME): $(OBJ)
 ### Cleaning rules
 #
 
-clean: 
-	@rm -v $(OBJ)
-
-clean_bonus:
-	@rm -v $(OBJ_BONUS)
+clean:
+	@rm -rfv $(OBJ_BONUS)
 
 fclean: clean
-	@rm -v $(NAME)
-
-fclean_bonus: clean_bonus
-	@rm -v $(NAME)
+	@rm -rfv $(NAME)
 
 re: fclean all
 
-rebonus: fclean_bonus bonus
+rebonus: fclean bonus
 
-.PHONY: clean fclean re all clean_bonus bonus fclean_bonus rebonus
+.PHONY: clean fclean re all bonus rebonus
