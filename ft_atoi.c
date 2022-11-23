@@ -6,13 +6,13 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 14:07:50 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/18 12:17:48 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/23 17:41:34 by eslamber         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_iswhitespace(int c)
+static int	ft_iswhitespace(int c)
 {
 	if (c == '\n' || c == ' ' || c == '\t' || c == '\v' || c == '\f')
 		return (1);
@@ -21,7 +21,7 @@ int	ft_iswhitespace(int c)
 	return (0);
 }
 
-void	analyse(int *minus, size_t *len, const char *s)
+static void	analyse(int *minus, size_t *len, const char *s)
 {
 	*minus = 1;
 	*len = 0;

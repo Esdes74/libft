@@ -6,13 +6,13 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 13:39:07 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/17 14:06:32 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/23 17:30:52 by eslamber         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	analyse(char *s, char c, size_t *len)
+static size_t	analyse(char *s, char c, size_t *len)
 {
 	size_t	nbr;
 
@@ -29,7 +29,7 @@ size_t	analyse(char *s, char c, size_t *len)
 	return (nbr);
 }
 
-void	annihilation(char **s)
+static void	annihilation(char **s)
 {
 	size_t	len;
 
@@ -39,7 +39,7 @@ void	annihilation(char **s)
 	free(s);
 }
 
-int	construc_new(char **new, const char *s, size_t *len_n, size_t *nbr_w)
+static int	const_new(char **new, const char *s, size_t *len_n, size_t *nbr_w)
 {
 	if ((*len_n == 0 && s[*len_n] != '\0') \
 			|| (s[*len_n - 1] == '\0' && s[*len_n] != '\0'))
@@ -74,7 +74,7 @@ char	**ft_split(const char *s, char c)
 	len_new = 0;
 	nbr_word = 0;
 	while (len_new < len)
-		if (construc_new(new, src, &len_new, &nbr_word) == 0)
+		if (const_new(new, src, &len_new, &nbr_word) == 0)
 			return (0);
 	free(src);
 	return (new);

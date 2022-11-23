@@ -6,7 +6,7 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 14:45:41 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/14 14:59:03 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/23 16:13:40 by eslamber         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,11 @@ char	*ft_strjoin(const char *dest, const char *src)
 	char	*new;
 
 	len_tot = ft_strlen(dest) + ft_strlen(src) + 1;
-	new = ft_substr(dest, 0, len_tot);
+	new = (char *) malloc(sizeof(char) * len_tot);
 	if (new == 0)
 		return (0);
+	new[0] = '\0';
+	ft_strlcat(new, dest, len_tot);
 	ft_strlcat(new, src, len_tot);
 	return (new);
 }
