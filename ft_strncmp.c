@@ -6,21 +6,26 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 23:11:33 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/10 12:25:45 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/23 12:40:26 by eslamber         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_strncmp(const char *first, const char *sec, size_t n)
 {
-	size_t	len;
+	size_t			len;
+	unsigned char	*u_first;
+	unsigned char	*u_sec;
 
 	len = 0;
-	while (first[len] != '\0' && sec[len] != '\0' && len < n)
+	u_first = (unsigned char *)first;
+	u_sec = (unsigned char *)sec;
+	while ((u_first[len] != '\0' || u_sec[len] != '\0') && len < n)
 	{
-		if (first[len] != sec[len])
-			return (first[len] - sec[len]);
+		if (u_first[len] != u_sec[len])
+			return (u_first[len] - u_sec[len]);
 		len++;
 	}
 	return (0);

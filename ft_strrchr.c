@@ -6,7 +6,7 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 23:05:26 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/10 16:05:09 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/23 11:19:02 by eslamber         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 	save = -1;
 	while (s[len] != '\0')
 	{
-		if (s[len] == c)
+		if (s[len] == (char) c)
 			save = len;
 		len++;
 	}

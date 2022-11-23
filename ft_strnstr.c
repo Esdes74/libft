@@ -6,7 +6,7 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 23:24:17 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/10 19:29:56 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/23 13:31:09 by eslamber         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t n)
 			i++;
 			len_test++;
 		}
-		if (little[len_test] == '\0')
+		if (little[len_test] == '\0' && len_test < n - 1)
 			return ((char *) big + len);
 		len++;
 	}
