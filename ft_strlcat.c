@@ -6,13 +6,13 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 17:12:16 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/23 12:14:02 by eslamber         ###   ########lyon.fr   */
+/*   Updated: 2022/11/24 10:06:48 by eslamber         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	max(size_t x, size_t y)
+static size_t	max(size_t x, size_t y)
 {
 	if (x > y)
 		return (x);

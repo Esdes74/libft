@@ -6,13 +6,13 @@
 /*   By: eslamber <eslamber@student.42.ft>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 17:23:17 by eslamber          #+#    #+#             */
-/*   Updated: 2022/11/18 12:21:24 by eslamber         ###   ########.fr       */
+/*   Updated: 2022/11/24 10:07:48 by eslamber         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	calc_len(int n)
+static int	calc_len(int n)
 {
 	int			len;
 	long int	nbr;
